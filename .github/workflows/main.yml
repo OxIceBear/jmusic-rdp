@@ -1,0 +1,16 @@
+name: Made By oxIceBear
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Download
+      run: Invoke-WebRequest https://github.com/jagrosh/MusicBot/releases/download/0.3.9/JMusicBot-0.3.9.jar -OutFile jmusic.jar
+    - name: Download config
+      run: Invoke-WebRequest https://free1.pylexservers.xyz:8080/download/file?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6ImNhZWJhY2I1MTMxYjllZDU4NTA0MjliN2QxZDM0Y2Y5In0.eyJpc3MiOiJodHRwczovL2ZyZWUucHlsZXhub2Rlcy5uZXQiLCJhdWQiOlsiaHR0cHM6Ly9mcmVlMS5weWxleHNlcnZlcnMueHl6OjgwODAiXSwianRpIjoiY2FlYmFjYjUxMzFiOWVkNTg1MDQyOWI3ZDFkMzRjZjkiLCJpYXQiOjE2OTI3MjQ2MTYsIm5iZiI6MTY5MjcyNDMxNiwiZXhwIjoxNjkyNzI1NTE2LCJmaWxlX3BhdGgiOiIvY29uZmlnLnR4dCIsInNlcnZlcl91dWlkIjoiMWIyZDA5MGItZDEzMi00NDQxLWIxNjQtMGNlNDNmNGYyNDA3IiwidXNlcl91dWlkIjoiZWY3ZjNjMTUtMDIzMS00MDkyLThiY2YtYTcyOGZkNzk1Mjg5IiwidXNlcl9pZCI6ODY0MCwidW5pcXVlX2lkIjoiN3RYdzdDclRTMllZWW5LOSJ9.m9VfI2vFQwG3HdMaP3z59WqvQLiO_01geWKurrVYMws
+    - name: Start Jmusicbot
+      run: jmusic.jar
