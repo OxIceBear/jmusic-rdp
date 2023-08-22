@@ -13,4 +13,4 @@ jobs:
     - name: Download config
       run: Invoke-WebRequest https://www.dropbox.com/scl/fi/ztczgocw938r6ay0r4duu/config.txt?rlkey=qk08v6qjkn27904iw3tp3299d -OutFile config.txt   
     - name: Start Jmusicbot
-      run: jmusic.jar
+      run: java -Dnogui=true -jar jmusic.jar
