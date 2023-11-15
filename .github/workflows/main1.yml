@@ -1,0 +1,16 @@
+name: Made By oxIceBear
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Download
+      run: Invoke-WebRequest https://github.com/jagrosh/MusicBot/releases/download/0.3.9/JMusicBot-0.3.9.jar -OutFile jmusic.jar
+    - name: Download config
+      run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/ztczgocw938r6ay0r4duu/config.txt?dl=0&dlp=&rlkey=qk08v6qjkn27904iw3tp3299d&dl=1" -OutFile "config.txt"
+    - name: Start Jmusicbot
+      run: java -Dnogui=true -jar jmusic.jar
