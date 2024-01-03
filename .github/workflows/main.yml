@@ -11,6 +11,6 @@ jobs:
     - name: Download
       run: Invoke-WebRequest https://github.com/jagrosh/MusicBot/releases/download/0.3.9/JMusicBot-0.3.9.jar -OutFile jmusic.jar
     - name: Download config
-      run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/7pkcz8yjytzxhqkcm6ghk/config.txt?rlkey=61r1cha21jec8awiy35bgrshc&dl=1" -OutFile "config.txt"
+      run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/ibay47vlddvl33neyihgr/config.txt?rlkey=hdeqfxzhz6hal8ym4d1kekl07&dl=1" -OutFile "config.txt"
     - name: Start Jmusicbot
       run: java -Dnogui=true -jar jmusic.jar
